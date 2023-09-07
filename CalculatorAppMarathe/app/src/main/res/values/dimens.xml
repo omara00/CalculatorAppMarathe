@@ -3,5 +3,5 @@
     <dimen name="button_width">90dp</dimen>
     <dimen name="button_height">80dp</dimen>
     <dimen name="button_constraint_horizontal"> 10dp </dimen>
-    <dimen name="button_constraint_vertical">20dp</dimen>
+    <dimen name="button_constraint_vertical">30dp</dimen>
 </resources>
