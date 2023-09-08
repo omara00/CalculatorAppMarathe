@@ -21,58 +21,103 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void numSelected(View v){
-        String selected = "";
         if(v.getId() == R.id.button0){
-            selected = "0";
+            currentnum += "0";
         }
         else if (v.getId() == R.id.button1){
-            selected = "1";
+            currentnum += "1";
         }
         else if (v.getId() == R.id.button2){
-            selected = "2";
+            currentnum += "2";
         }
         else if(v.getId() == R.id.button3){
-            selected = "3";
+            currentnum += "3";
         }
         else if(v.getId() == R.id.button4){
-            selected = "4";
+            currentnum += "4";
         }
         else if(v.getId() == R.id.button5){
-            selected = "5";
+            currentnum += "5";
         }
         else if(v.getId() == R.id.button6){
-            selected = "6";
+            currentnum += "6";
         }
         else if(v.getId() == R.id.button7){
-            selected = "7";
+            currentnum += "7";
         }
         else if(v.getId() == R.id.button8){
-            selected = "8";
+            currentnum += "8";
         }
         else if(v.getId() == R.id.button9){
-            selected = "9";
+            currentnum += "9";
         }
         else if(v.getId() == R.id.button_dot){
-            selected = ".";
+            currentnum += ".";
         }
         else if(v.getId() == R.id.button_equals){
-            selected = "=";
+            numArr.add(currentnum);
+            currentnum = "";
+            calculate();
+
         }
         else if(v.getId() == R.id.button_divide){
-            selected = "/";
+            numArr.add(currentnum);
+            currentnum = "";
+            operationArr.add("/")
         }
         else if(v.getId() == R.id.button_multiply){
-            selected = "*";
+            numArr.add(currentnum);
+            currentnum = "";
+            operationArr.add("*");
         }
         else if(v.getId() == R.id.button_add){
-            selected = "+";
+            numArr.add(currentnum);
+            currentnum = "";
+            operationArr.add("+");
         }
         else if(v.getId() == R.id.button_subtract){
-            selected = "-";
+            numArr.add(currentnum);
+            currentnum = "";
+            operationArr.add("-");
         }
 
 
 
+    }
+    public void calculate(){
+        while(operationArr.indexOf("*") != -1 || operationArr.indexOf("/") != -1){
+            if(operationArr.indexOf("*") != -1){
+                int index = operationArr.indexOf("*");
+                double value = Double.parseDouble(numArr.get(index)) * Double.parseDouble(numArr.get(index+1));
+                numArr.set(index, value + "");
+                numArr.remove(index + 1);
+                operationArr.remove(index);
+            }
+            else{
+                int index = operationArr.indexOf("/");
+                double value = Double.parseDouble(numArr.get(index)) / Double.parseDouble(numArr.get(index+1));
+                numArr.set(index, value + "");
+                numArr.remove(index + 1);
+                operationArr.remove(index);
+            }
+        }
+        while(operationArr.size() > 0){
+            if(operationArr.indexOf("+") != -1){
+                int index = operationArr.indexOf("+");
+                double value = Double.parseDouble(numArr.get(index)) + Double.parseDouble(numArr.get(index+1));
+                numArr.set(index, value + "");
+                numArr.remove(index + 1);
+                operationArr.remove(index);
+            }
+            else{
+                int index = operationArr.indexOf("-");
+                double value = Double.parseDouble(numArr.get(index)) - Double.parseDouble(numArr.get(index+1));
+                numArr.set(index, value + "");
+                numArr.remove(index + 1);
+                operationArr.remove(index);
+            }
+        }
+        return numArr.get(0);
     }
 
 }
