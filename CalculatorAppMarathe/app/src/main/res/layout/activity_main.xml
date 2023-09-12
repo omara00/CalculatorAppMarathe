@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/md_theme_light_onSecondaryContainer"
     tools:context=".MainActivity">
 
 
@@ -16,8 +17,10 @@
         android:paddingRight="5dp"
         android:paddingBottom="10dp"
         android:text="TextView"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/button1"
@@ -26,10 +29,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calcScreen"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button2"
@@ -38,10 +42,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="2"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/calcScreen"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button3"
@@ -50,10 +55,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/calcScreen"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button4"
@@ -62,10 +68,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button5"
@@ -74,10 +81,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="5"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button6"
@@ -86,10 +94,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="6"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button3"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button7"
@@ -98,10 +107,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button8"
@@ -110,10 +120,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="8"
         app:layout_constraintStart_toEndOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button5"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button9"
@@ -122,10 +133,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="9"
         app:layout_constraintStart_toEndOf="@+id/button8"
         app:layout_constraintTop_toBottomOf="@+id/button6"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button0"
@@ -134,10 +146,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button_dot"
@@ -146,10 +159,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="."
         app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toBottomOf="@+id/button8"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button_equals"
@@ -158,10 +172,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="="
         app:layout_constraintStart_toEndOf="@+id/button_dot"
         app:layout_constraintTop_toBottomOf="@+id/button9"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button_add"
@@ -170,10 +185,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="+"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/calcScreen"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button_subtract"
@@ -182,10 +198,11 @@
         android:layout_marginStart="@dimen/button_constraint_horizontal"
         android:layout_marginTop="@dimen/button_constraint_vertical"
         android:background="@color/cardview_light_background"
+        android:onClick="numSelected"
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/button_add"
-        android:onClick="numSelected"/>
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button_multiply"
@@ -197,7 +214,8 @@
         android:onClick="numSelected"
         android:text="*"
         app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/button_subtract" />
+        app:layout_constraintTop_toBottomOf="@+id/button_subtract"
+        android:textSize="@dimen/button_text"/>
 
     <Button
         android:id="@+id/button_divide"
@@ -209,7 +227,34 @@
         android:onClick="numSelected"
         android:text="/"
         app:layout_constraintStart_toEndOf="@+id/button_equals"
-        app:layout_constraintTop_toBottomOf="@+id/button_multiply" />
+        app:layout_constraintTop_toBottomOf="@+id/button_multiply"
+        android:textSize="@dimen/button_text"/>
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="@dimen/big_button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/button_constraint_horizontal"
+        android:layout_marginTop="@dimen/button_constraint_vertical"
+        android:background="@color/cardview_light_background"
+        android:text="DEL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_dot"
+        android:textSize="@dimen/button_text"
+        android:onClick="delete"/>
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="@dimen/big_button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/button_constraint_horizontal"
+        android:layout_marginTop="@dimen/button_constraint_vertical"
+        android:background="@color/cardview_light_background"
+        android:onClick="clear"
+        android:text="CLEAR"
+        app:layout_constraintStart_toEndOf="@+id/button_delete"
+        app:layout_constraintTop_toBottomOf="@+id/button_divide"
+        android:textSize="@dimen/button_text"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
